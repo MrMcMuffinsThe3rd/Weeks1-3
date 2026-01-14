@@ -10,6 +10,8 @@ public class LinearInterpolation : MonoBehaviour
     //public Vector2 endPoition;
     public Transform end;
 
+    public AnimationCurve curve;
+
     public float t = 0; 
 
     void Start()
@@ -28,6 +30,10 @@ public class LinearInterpolation : MonoBehaviour
 
         //transform.position = Vector2.Lerp(startPoition, endPoition, t);
         transform.position = Vector2.Lerp(start.position, end.position, t);
+
+        float y = curve.Evaluate(t);
+
+        //transform.localScale = Vector3.one * curve.Evaluate(t);
 
     }
 }
