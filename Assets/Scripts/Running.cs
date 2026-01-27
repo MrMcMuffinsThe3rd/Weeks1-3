@@ -38,12 +38,6 @@ public class Running : MonoBehaviour
             t = 0;
         }
 
-        //moves the object between 2 transform positions relative to time
-        transform.position = Vector2.Lerp(start.position, end.position, t);
-
-        float y = curve.Evaluate(t); //evaluates the curve
-        transform.localPosition = Vector3.one * curve.Evaluate(t); //eases the lerp using an animation curve
-
-        pNoise = Mathf.PerlinNoise(x, y);
+        
     }
 }
