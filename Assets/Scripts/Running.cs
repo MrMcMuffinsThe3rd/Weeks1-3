@@ -38,6 +38,11 @@ public class Running : MonoBehaviour
             t = 0;
         }
 
-        
+        //left to do:
+        //add easing to astro running
+        //do the same for monster floating
+        //add perlin noise to ufo
+        //set light to "spot"
+        //done
     }
 }
