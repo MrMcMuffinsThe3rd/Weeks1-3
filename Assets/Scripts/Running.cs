@@ -6,11 +6,7 @@ using UnityEngine.Rendering;
 
 public class Running : MonoBehaviour
 {
-    //public float speed = 0.01f;
-    public float pNoise;
-    //x and y positions for perlin noise
-    public float x;
-    public float y;
+    public float speed;
 
     //lerp start/end object variables
     public Transform start;
@@ -18,9 +14,6 @@ public class Running : MonoBehaviour
 
     //time variable
     public float t = 0.01f;
-
-    //animation curve variable for easing
-    public AnimationCurve curve;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,11 +25,15 @@ public class Running : MonoBehaviour
     void Update()
     {
 
-        t += Time.deltaTime;
+        t += Time.deltaTime * speed;
         if (t > 1)
         {
             t = 0;
         }
+
+        transform.position = Vector2.Lerp(start.position, end.position, t);
+
+
 
         //left to do:
         //add easing to astro running
