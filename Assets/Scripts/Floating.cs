@@ -27,7 +27,7 @@ public class Floating : MonoBehaviour
     void Update()
     {
         t += Time.deltaTime * speed;
-        if (t > 0.5) //decreased so that the alien is always behind the astronaut
+        if (t > 1) //decreased so that the alien is always behind the astronaut
         {
             t = 0;
         }
@@ -41,12 +41,5 @@ public class Floating : MonoBehaviour
         Vector2 newYPos = transform.position;
         newYPos.y = Mathf.PerlinNoise(x,y) * t; //attempt at perlin noise usage
         transform.position = newYPos;
-
-
-
-        //left to do:
-        //add perlin noise to ufo
-        //set light to "spot"
-        //done
     }
 }

@@ -26,7 +26,7 @@ public class Running : MonoBehaviour
     {
 
         t += Time.deltaTime * speed; //slows down the movement of the astronaut
-        if (t > 1)
+        if (t > 1.4)
         {
             t = 0;
         }
