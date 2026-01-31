@@ -35,8 +35,5 @@ public class Running : MonoBehaviour
         transform.position = Vector2.Lerp(start.position, end.position, t);
     }
 
-    //to do before submit
-    //accomodate for different screen sizes
-    //merge to main
     //type out readings and classwork (practice and also we need them for grades)
 }
